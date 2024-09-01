@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "learning/Second",
+    "learning/Widget",
+    "learning/ListUi",
+    "learning/GridUi",
+    "learning/TextInputUi",
+    "learning/ImageUi"
+  ]
+}
