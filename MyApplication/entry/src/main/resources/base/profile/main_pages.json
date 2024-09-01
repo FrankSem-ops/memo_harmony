@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Second",
+    "pages/Widget",
+    "pages/ListUi",
+    "pages/GridUi",
+    "pages/TextInputUi",
+    "pages/ImageUi"
+  ]
+}
