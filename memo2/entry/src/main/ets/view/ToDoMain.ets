@@ -14,22 +14,24 @@ export struct ToDoMain {
     { text: "买套别墅", finished: false },
     { text: "改掉爱做梦的习惯", finished: false },
   ];
+
   // @Link todoList: TodoModel[]
   build() {
-    Column({ space: 10 }) {
-      TodoHeader({ todoList: this.todoList })
-      TodoInput()
-      ForEach(this.todoList, (item: TodoModel, index: number) => {
-        // 此时调用TodoItem
-        TodoItem({
-          item, onChange: () => {
-            this.changeStatus(item, index)
-          }
+    Scroll() {
+      Column({ space: 10 }) {
+        TodoHeader({ todoList: this.todoList })
+        TodoInput({ todoList: this.todoList })
+        ForEach(this.todoList, (item: TodoModel, index: number) => {
+          // 此时调用TodoItem
+          TodoItem({
+            item, onChange: () => {
+              this.changeStatus(item, index)
+            }
+          })
         })
-      })
-
-    }
-    .width('100%')
+      }
+      .width('100%')
+    }.layoutWeight(1)
   }
 
   changeStatus(item: TodoModel, index: number) {
@@ -38,6 +40,4 @@ export struct ToDoMain {
       finished: !item.finished
     }
   }
-
-
 }
