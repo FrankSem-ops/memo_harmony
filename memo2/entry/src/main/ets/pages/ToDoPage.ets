@@ -1,6 +1,7 @@
 import { TodoItem } from '../view/ToDoItem'
 import { TodoHeader } from '../view/ToDoHeader'
 import { TodoModel } from '../model/ToDoModel'
+import { TodoInput } from '../view/ToDoInput'
 
 @Entry
 @Component
@@ -17,6 +18,7 @@ struct ToDoPage {
   build() {
     Column({ space: 10 }) {
       TodoHeader()
+      TodoInput()
       ForEach(this.totalFlags, (item: TodoModel) => {
         // 这里是传参，把父的name传递给了子里的name
         TodoItem({ name: item.text})
