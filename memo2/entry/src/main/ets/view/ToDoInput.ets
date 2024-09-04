@@ -7,7 +7,7 @@ export struct TodoInput {
   @Link todoList: TodoModel[]
   build() {
     Row() {
-      TextInput({ placeholder: '请输入新目标', text: $$this.newFlag })
+      TextInput({ placeholder: '请输入新任务', text: $$this.newFlag })
         .width('90%')
         .onSubmit(() => {
           if (this.newFlag) {

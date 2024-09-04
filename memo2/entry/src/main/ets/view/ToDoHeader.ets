@@ -18,15 +18,17 @@ export struct TodoHeader {
   }
   build() {
     Row() {
-      Text('今年目标')
+      Text('当前任务列表')
         .fontSize(30)
         .fontWeight(FontWeight.Bold)
         .margin({ right: 20 })
+        .fontColor('#4876FF')
       Stack() {
         Progress({ value: this.finishedCount, total: this.todoList.length, type: ProgressType.Ring })
           .width(80)
           .height(80)
         Text(`${this.finishedCount} / ${this.todoList.length}`)
+          .fontColor('#4876FF')
       }
 
     }
