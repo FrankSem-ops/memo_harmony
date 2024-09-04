@@ -17,21 +17,24 @@ export struct ToDoMain {
 
   // @Link todoList: TodoModel[]
   build() {
-    Scroll() {
       Column({ space: 10 }) {
         TodoHeader({ todoList: this.todoList })
         TodoInput({ todoList: this.todoList })
-        ForEach(this.todoList, (item: TodoModel, index: number) => {
-          // 此时调用TodoItem
-          TodoItem({
-            item, onChange: () => {
-              this.changeStatus(item, index)
+        List({ space: 10 }) {
+          ForEach(this.todoList, (item: TodoModel, index: number) => {
+            // 把TodoItem用ListItem包起来，因为List组件里只能放`ListItem`
+            ListItem() {
+              TodoItem({
+                item, onChange: () => {
+                  this.changeStatus(item, index)
+                }
+              })
             }
           })
-        })
+        }.width('100%')
+        .height(500)
       }
       .width('100%')
-    }.layoutWeight(1)
   }
 
   changeStatus(item: TodoModel, index: number) {
