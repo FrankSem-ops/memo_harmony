@@ -8,11 +8,13 @@ export struct ToDoMain {
   @State name: string = 'abc'
   // @State todoList: number[] = [1, 2, 3, 4, 5, 6, 7]
   @State todoList: Array<TodoModel> = [
-    { text: "月入5万", finished: false },
-    { text: "中彩票500万", finished: false },
-    { text: "找个富婆", finished: false },
-    { text: "买套别墅", finished: false },
-    { text: "改掉爱做梦的习惯", finished: false },
+    { text: "学习harmony状态更新相关内容", finished: false },
+    { text: "学习harmony自定义组件相关内容", finished: false },
+    { text: "学习harmony组件化相关内容", finished: false },
+    { text: "中彩票5个小目标", finished: false },
+    { text: "买下汤臣一品（靠黄浦江那栋）", finished: false },
+    { text: "收复台湾和小日子", finished: false },
+    { text: "莫欺老年穷", finished: false },
   ];
 
   // @Link todoList: TodoModel[]

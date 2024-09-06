@@ -7,6 +7,7 @@
     "learning/ListUi",
     "learning/GridUi",
     "learning/TextInputUi",
-    "learning/ImageUi"
+    "learning/ImageUi",
+    "learning/StackUi"
   ]
 }
