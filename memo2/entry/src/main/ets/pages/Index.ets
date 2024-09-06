@@ -17,7 +17,7 @@ struct Index {
       // 跳转按钮绑定onClick事件，点击时跳转到第二页
       .onClick(() => {
         // 跳转到第二页
-        router.pushUrl({ url: 'pages/ToDoPage' })
+        router.pushUrl({ url: 'learning/RelativeContainerUi' })
       })
       // 按钮组件的类型（默认是50%圆角的）
       .type(ButtonType.Normal)

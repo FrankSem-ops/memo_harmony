@@ -10,7 +10,8 @@ export struct TextInputUi {
         .type(InputType.Password)
         .maxLength(9)
         .showPasswordIcon(true)
-    }.width('100%')
+    }.backgroundColor('#304682b4')
+    .width('100%')
     .height('100%')
   }
 }
